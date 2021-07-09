@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: "api-boilerplate-mysql"
+    environment:
+      MYSQL_DATABASE: 'boilerplate'
+      MYSQL_USER: 'dev'
+      MYSQL_PASSWORD: 'secret123'
+      MYSQL_ROOT_PASSWORD: 'secret123'
+    ports:
+      - 3306:3306
+    volumes:
+      - ./volumes/mysql:/var/lib/mysql
+
+  redis:
+    image: redis:5.0.7
+    container_name: "api-boilerplate-redis"
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - 6379:6379
+    volumes:
+      - ./volumes/redis:/data
