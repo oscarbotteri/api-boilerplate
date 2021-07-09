@@ -1,0 +1,23 @@
+# General config
+APP_NAME: "api-boilerplate"
+APP_ENV: "local"
+LOG_LEVEL: "silly"
+HTTP_PORT: 3000
+ACCEPTABLE_RESPONSE_TIME: 3000
+APOLLO_PLAYGROUND: "true"
+
+# Authentication config
+AUTH_SECRET: "secret"
+AUTH_EXPIRES: "12h"
+AUTH_SALT_ROUNDS: 12
+
+# DB config
+DB_TYPE: "mysql"
+DB_HOST: "localhost"
+DB_PORT: 3306
+DB_USER: "dev"
+DB_PASS: "secret123"
+DB_NAME: "boilerplate"
+DB_POOL: 5
+DB_LOGS: "all"
+DB_SYNC: "true"
